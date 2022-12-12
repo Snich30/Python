@@ -1,0 +1,31 @@
+import numpy as np
+import matplotlib.pyplot as plt
+a0 = float(input("Введите a0: "))
+a1 = float(input("Введите a1: "))
+a2 = float(input("Введите a2: "))
+a3 = float(input("Введите a3: "))
+#пример выглядит так: 2x^4-21x^3-20x^2+2 =>  
+# 2 это у нас а0
+# функция
+y = lambda x: 2*a1*x**4-21*a2*x**3-20*a3*x**2+a0;
+
+
+x = np.linspace(-5, 5,21)
+print(' x y(x)')
+for temp in x :
+       print ( temp, y(temp))
+xmax = max(x,key=y)
+print('Xmax = ',xmax,end=' ')
+fmax = max(y(x))
+print('Ymax = ',fmax)
+xmin = min(x,key=y)
+print('Xmin = ',xmin,end=' ')
+fmin = min(y(x))
+print('Ymin = ',fmin)
+msvcrt.getch()
+
+fig = plt.subplots()# создаём рисунок с координатную плоскость
+
+plt.plot(x, y(x))# рисуем график
+
+plt.show()# показываем график
