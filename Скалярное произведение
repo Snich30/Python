@@ -1,0 +1,36 @@
+#Скалярное произведение
+import msvcrt
+import numpy as UWU
+
+A = UWU.array([[1,2,3], [1,2,1], [3,2,0]])
+print('Исходный массив A')
+print(A)
+
+B = UWU.array([[4,1,2], [0,4,3], [1,1,1]])
+print('Исходный массив B')
+print(B)
+
+P = UWU.array([0.1,1.7,-1.5])
+print('Исходный массив P')
+print(P)
+
+Q = UWU.array([-1.6,0.8,1.1]) 
+print('Исходный массив Q')
+print(Q)
+
+
+R = UWU.array([-0.7,1.3,0.2])
+print('Исходный массив R')
+print(R)
+
+x = UWU.dot(B,Q)
+print ('x =', x)
+y = UWU.dot(A,x)
+print ('y =', y)
+z = Q-y
+print ('z =', z)
+s = UWU.dot(z,Q)
+print ('s =', s)
+msvcrt.getch()
+
+#s=(q-ABq,q)
